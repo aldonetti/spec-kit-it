@@ -151,6 +151,18 @@ Want to see Spec Kit in action? Watch our [video overview](https://www.youtube.c
 | [Amazon Q Developer CLI](https://aws.amazon.com/developer/learning/q-developer-cli/) | ⚠️ | Amazon Q Developer CLI [does not support](https://github.com/aws/amazon-q-developer-cli/issues/3064) custom arguments for slash commands. |
 | [Amp](https://ampcode.com/) | ✅ | |
 
+## 🌐 Localization
+
+The commmands under `templates/commands/` are authored as English prompts intended for LLM/agent consumption. For this repository's localized workflow, the final artifacts produced by those prompts (for example: specifications, plans, tasks, checklists, and analysis reports) are expected to be generated in Italian.
+The template files under `templates/*-template.md` provide specific localized templates for the artifacts being created. 
+
+Important rules:
+
+- Preserve technical tokens and placeholders exactly (e.g., `$ARGUMENTS`, `{SCRIPT}`, `{AGENT_SCRIPT}`, `FR-###`, `T###`, `CHK###`).
+- Preserve file names, paths, and literal identifiers unchanged.
+- Keep the project term "Constitution" in English when referenced.
+- Do not translate `[NEEDS CLARIFICATION]` markers or other bracketed template tokens.
+
 ## 🔧 Specify CLI Reference
 
 The `specify` command supports the following options:

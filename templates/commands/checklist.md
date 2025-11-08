@@ -34,6 +34,8 @@ $ARGUMENTS
 
 You **MUST** consider the user input before proceeding (if not empty).
 
+**Localization Directive**: Tutte le checklist e i relativi report DEVONO essere prodotti in Italiano. Mantieni invariati i token `$ARGUMENTS`, `{SCRIPT}`, nomi file, marcatori come `[Gap]`, `[Ambiguity]`, `[Conflict]`, ID `CHK###` e il termine "Constitution" quando referenziato.
+
 ## Execution Steps
 
 1. **Setup**: Run `{SCRIPT}` from repo root and parse JSON for FEATURE_DIR and AVAILABLE_DOCS list.
@@ -214,13 +216,13 @@ You **MUST** consider the user input before proceeding (if not empty).
    - Actor/timing
    - Any explicit user-specified must-have items incorporated
 
-**Important**: Each `/speckit.checklist` command invocation creates a checklist file using short, descriptive names unless file already exists. This allows:
+**Importante**: Ogni invocazione di `/speckit.checklist` crea un file di checklist con nomi brevi e descrittivi (salvo esista già). Questo consente:
 
 - Multiple checklists of different types (e.g., `ux.md`, `test.md`, `security.md`)
 - Simple, memorable filenames that indicate checklist purpose
 - Easy identification and navigation in the `checklists/` folder
 
-To avoid clutter, use descriptive types and clean up obsolete checklists when done.
+Per evitare disordine, usa tipi descrittivi e rimuovi le checklist obsolete quando non servono più.
 
 ## Example Checklist Types & Sample Items
 

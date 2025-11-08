@@ -13,6 +13,8 @@ $ARGUMENTS
 
 You **MUST** consider the user input before proceeding (if not empty).
 
+**Localization Directive**: Tutto il contenuto generato (specificazione, checklist di qualità, domande di chiarimento, messaggi di esito) DEVE essere in Italiano, mantenendo intatti i token `$ARGUMENTS`, `{SCRIPT}`, nomi file, ID requisito (FR-###, SC-###) e il termine "Constitution" quando referenziato. Non tradurre i marcatori `[NEEDS CLARIFICATION]`.
+
 ## Outline
 
 The text the user typed after `/speckit.specify` in the triggering message **is** the feature description. Assume you always have it available in this conversation even if `{ARGS}` appears literally below. Do not ask the user to repeat it unless they provided an empty command.
@@ -64,6 +66,8 @@ Given that feature description, do this:
 
 3. Load `templates/spec-template.md` to understand required sections.
 
+   Il template resta in inglese come struttura di riferimento; la resa finale dei contenuti compilati deve essere in Italiano.
+
 4. Follow this execution flow:
 
     1. Parse user description from Input
@@ -91,6 +95,8 @@ Given that feature description, do this:
     8. Return: SUCCESS (spec ready for planning)
 
 5. Write the specification to SPEC_FILE using the template structure, replacing placeholders with concrete details derived from the feature description (arguments) while preserving section order and headings.
+
+   Tutte le sezioni compilate vanno in Italiano; mantenere le intestazioni originali se richiesto dal processo ma tradurre il testo descrittivo e le liste.
 
 6. **Specification Quality Validation**: After writing the initial spec, validate it against quality criteria:
 
@@ -137,9 +143,13 @@ Given that feature description, do this:
       - For each item, determine if it passes or fails
       - Document specific issues found (quote relevant spec sections)
 
+   L'esito e le descrizioni dei problemi devono essere espressi in Italiano.
+
    c. **Handle Validation Results**:
 
       - **If all items pass**: Mark checklist complete and proceed to step 6
+
+            Indicare lo stato finale usando dicitura italiana (es.: "Tutti gli elementi superati").
 
       - **If items fail (excluding [NEEDS CLARIFICATION])**:
         1. List the failing items and specific issues
@@ -185,6 +195,8 @@ Given that feature description, do this:
    d. **Update Checklist**: After each validation iteration, update the checklist file with current pass/fail status
 
 7. Report completion with branch name, spec file path, checklist results, and readiness for the next phase (`/speckit.clarify` or `/speckit.plan`).
+
+   Il rapporto finale (summary) deve essere completamente in Italiano, mantenendo invariati nomi di file e branch.
 
 **NOTE:** The script creates and checks out the new branch and initializes the spec file before writing.
 

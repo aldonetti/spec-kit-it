@@ -10,6 +10,8 @@ $ARGUMENTS
 
 You **MUST** consider the user input before proceeding (if not empty).
 
+**Localization Directive**: L'intero contenuto generato della Constitution (testo principi, governance, report di sincronizzazione) deve essere in Italiano, mantenendo il termine chiave "Constitution" in Inglese. Non tradurre i placeholder in MAIUSCOLO tra parentesi quadre fino a quando non vengono sostituiti. Mantieni i token `$ARGUMENTS` e i nomi file invariati.
+
 ## Outline
 
 You are updating the project constitution at `/memory/constitution.md`. This file is a TEMPLATE containing placeholder tokens in square brackets (e.g. `[PROJECT_NAME]`, `[PRINCIPLE_1_NAME]`). Your job is to (a) collect/derive concrete values, (b) fill the template precisely, and (c) propagate any amendments across dependent artifacts.
@@ -65,6 +67,8 @@ Follow this execution flow:
    - Suggested commit message (e.g., `docs: amend constitution to vX.Y.Z (principle additions + governance update)`).
 
 Formatting & Style Requirements:
+
+Tutto il testo prodotto per punti, riepiloghi e spiegazioni deve essere espresso in Italiano formale e conciso.
 
 - Use Markdown headings exactly as in the template (do not demote/promote levels).
 - Wrap long rationale lines to keep readability (<100 chars ideally) but do not hard enforce with awkward breaks.

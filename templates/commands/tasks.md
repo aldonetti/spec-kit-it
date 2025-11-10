@@ -13,6 +13,8 @@ $ARGUMENTS
 
 You **MUST** consider the user input before proceeding (if not empty).
 
+**Localization Directive**: Genera `tasks.md`, riepiloghi, conteggi e messaggi di validazione interamente in Italiano. Mantieni intatti i token `$ARGUMENTS`, `{SCRIPT}`, nomi file/percorsi, marcatori `[P]`, ID task (T###), label [US#] e il termine "Constitution" quando referenziato.
+
 ## Outline
 
 1. **Setup**: Run `{SCRIPT}` from repo root and parse FEATURE_DIR and AVAILABLE_DOCS list. All paths must be absolute. For single quotes in args like "I'm Groot", use escape syntax: e.g 'I'\''m Groot' (or double-quote if possible: "I'm Groot").
@@ -57,6 +59,8 @@ You **MUST** consider the user input before proceeding (if not empty).
 Context for task generation: {ARGS}
 
 The tasks.md should be immediately executable - each task must be specific enough that an LLM can complete it without additional context.
+
+Il file tasks.md deve risultare immediatamente eseguibile e comprensibile in Italiano.
 
 ## Task Generation Rules
 

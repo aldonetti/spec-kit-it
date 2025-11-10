@@ -13,6 +13,8 @@ $ARGUMENTS
 
 You **MUST** consider the user input before proceeding (if not empty).
 
+**Localization Directive**: Tutti i messaggi operativi, tabelle di stato, errori/blocchi e il report finale DEVONO essere in Italiano. Mantieni invariati i token `$ARGUMENTS`, `{SCRIPT}`, nomi file/percorso, marcatori `[P]`, `[X]` e il termine "Constitution" quando referenziato.
+
 ## Outline
 
 1. Run `{SCRIPT}` from repo root and parse FEATURE_DIR and AVAILABLE_DOCS list. All paths must be absolute. For single quotes in args like "I'm Groot", use escape syntax: e.g 'I'\''m Groot' (or double-quote if possible: "I'm Groot").
@@ -34,19 +36,19 @@ You **MUST** consider the user input before proceeding (if not empty).
      ```
 
    - Calculate overall status:
-     - **PASS**: All checklists have 0 incomplete items
-     - **FAIL**: One or more checklists have incomplete items
+       - **PASS**: Tutte le checklist hanno 0 elementi incompleti
+       - **FAIL**: Una o più checklist hanno elementi incompleti
 
-   - **If any checklist is incomplete**:
-     - Display the table with incomplete item counts
-     - **STOP** and ask: "Some checklists are incomplete. Do you want to proceed with implementation anyway? (yes/no)"
+    - **Se qualche checklist è incompleta**:
+       - Mostra la tabella con i conteggi
+       - **STOP** e chiedi: "Alcune checklist sono incomplete. Vuoi procedere comunque con l'implementazione? (yes/no)"
      - Wait for user response before continuing
      - If user says "no" or "wait" or "stop", halt execution
      - If user says "yes" or "proceed" or "continue", proceed to step 3
 
-   - **If all checklists are complete**:
-     - Display the table showing all checklists passed
-     - Automatically proceed to step 3
+    - **Se tutte le checklist sono complete**:
+       - Mostra la tabella con tutti PASS
+       - Procedi automaticamente allo step 3
 
 3. Load and analyze the implementation context:
    - **REQUIRED**: Read tasks.md for the complete task list and execution plan
@@ -125,7 +127,7 @@ You **MUST** consider the user input before proceeding (if not empty).
    - For parallel tasks [P], continue with successful tasks, report failed ones
    - Provide clear error messages with context for debugging
    - Suggest next steps if implementation cannot proceed
-   - **IMPORTANT** For completed tasks, make sure to mark the task off as [X] in the tasks file.
+   - **IMPORTANTE** Per i task completati, assicurati di segnare [X] nel file tasks.
 
 9. Completion validation:
    - Verify all required tasks are completed
@@ -134,5 +136,5 @@ You **MUST** consider the user input before proceeding (if not empty).
    - Confirm the implementation follows the technical plan
    - Report final status with summary of completed work
 
-Note: This command assumes a complete task breakdown exists in tasks.md. If tasks are incomplete or missing, suggest running `/speckit.tasks` first to regenerate the task list.
+Nota: Questo comando presuppone un `tasks.md` completo. Se i task sono incompleti o mancanti, suggerisci di eseguire `/speckit.tasks` per rigenerare l'elenco.
 

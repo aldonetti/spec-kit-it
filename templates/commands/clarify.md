@@ -13,9 +13,13 @@ $ARGUMENTS
 
 You **MUST** consider the user input before proceeding (if not empty).
 
+**Localization Directive**: Le domande, i suggerimenti, i riepiloghi e gli aggiornamenti al file `spec.md` DEVONO essere in Italiano. Mantieni invariati i token `$ARGUMENTS`, `{SCRIPT}`, nomi file, marcatori `[NEEDS CLARIFICATION]`, e il termine "Constitution" quando referenziato.
+
 ## Outline
 
 Goal: Detect and reduce ambiguity or missing decision points in the active feature specification and record the clarifications directly in the spec file.
+
+Tutta la comunicazione verso l'utente e il testo inserito nella specifica devono essere in Italiano.
 
 Note: This clarification workflow is expected to run (and be completed) BEFORE invoking `/speckit.plan`. If the user explicitly states they are skipping clarification (e.g., exploratory spike), you may proceed, but must warn that downstream rework risk increases.
 

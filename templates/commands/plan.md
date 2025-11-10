@@ -16,11 +16,15 @@ $ARGUMENTS
 
 You **MUST** consider the user input before proceeding (if not empty).
 
+**Localization Directive**: Tutti gli output (piani, riepiloghi, messaggi di errore/validazione, quickstart, data-model, contracts) DEVONO essere in Italiano. Mantieni invariati i token `$ARGUMENTS`, `{SCRIPT}`, `{AGENT_SCRIPT}`, nomi file, ID e il termine "Constitution" quando referenziato. Non tradurre "NEEDS CLARIFICATION".
+
 ## Outline
 
 1. **Setup**: Run `{SCRIPT}` from repo root and parse JSON for FEATURE_SPEC, IMPL_PLAN, SPECS_DIR, BRANCH. For single quotes in args like "I'm Groot", use escape syntax: e.g 'I'\''m Groot' (or double-quote if possible: "I'm Groot").
 
 2. **Load context**: Read FEATURE_SPEC and `/memory/constitution.md`. Load IMPL_PLAN template (already copied).
+
+   I testi interpretativi e descrittivi che produci da questi contenuti devono essere in Italiano.
 
 3. **Execute plan workflow**: Follow the structure in IMPL_PLAN template to:
    - Fill Technical Context (mark unknowns as "NEEDS CLARIFICATION")
@@ -32,6 +36,8 @@ You **MUST** consider the user input before proceeding (if not empty).
    - Re-evaluate Constitution Check post-design
 
 4. **Stop and report**: Command ends after Phase 2 planning. Report branch, IMPL_PLAN path, and generated artifacts.
+
+   Il report conclusivo deve essere in Italiano, mantenendo i riferimenti tecnici in inglese.
 
 ## Phases
 
